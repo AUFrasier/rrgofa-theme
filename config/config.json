@@ -1,0 +1,16 @@
+{
+  "theme": {
+    "slug": "rrgofa",
+    "name": "Roofing Resources Of Georgia Theme",
+    "author": "Art Unlimited",
+    "PHPNamespace": "WP_Rig\\WP_Rig"
+  },
+  "dev": {
+    "browserSync": {
+      "live": true,
+      "proxyURL": "rrgofa.artunlimitedproof1.test",
+      "bypassPort": "8181",
+      "https": true
+    }
+  }
+}

@@ -1,0 +1,30 @@
+@import "_custom-properties.css";
+
+/*--------------------------------------------------------------
+# Links
+--------------------------------------------------------------*/
+/* stylelint-disable */
+a {
+	color: var(--color-link) !important;
+}
+/* stylelint-enable */
+
+a:visited {
+	text-decoration: none !important;
+}
+
+a:hover,
+a:focus,
+a:active {
+	color: var(--color-link-active) !important;
+	text-decoration: none !important;
+}
+
+a:focus {
+	outline: thin dotted;
+}
+
+a:hover,
+a:active {
+	outline: 0;
+}

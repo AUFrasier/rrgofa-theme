@@ -1,0 +1,169 @@
+@import "_custom-properties.css";
+@import "_custom-media.css";
+/*--------------------------------------------------------------
+## Header / Hero
+--------------------------------------------------------------*/
+.front-page-hero {
+	background-image: url();
+    background-repeat: no-repeat;
+	background-size: cover;
+}
+.header-top {
+	position: relative;
+	display: grid;
+}
+.header-contact-action a {
+    color: var(--primary-color);
+    font-family: var(--global-font-family);
+	font-weight: 900;
+	font-size: 30px;
+}
+.hero-container {
+	position: relative;
+}
+.hero-content {
+	width: 100%;
+	max-width: var(--content-width);
+	margin: auto;
+}
+.hero-text {
+	margin: 0;
+	color:white;
+	padding:30px;
+	font-weight: 900 !important;
+	font-size: 36px !important;
+}
+.hero-action {
+	display: block;
+	text-align: center;
+}
+#hero-btn {
+	font-weight: 900;
+	font-size: 24px;
+}
+#hero-tag {
+	font-family: var(--global-font-family);
+	font-size: 24px;
+	display: block;
+    margin: auto;
+	width: 100%;
+	max-width: var(--content-width);
+}
+/*--------------------------------------------------------------
+## Box
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+## Site toggles / Style checks
+--------------------------------------------------------------*/
+.is-visible {
+	display: block !important;
+}
+
+/*--------------------------------------------------------------
+## Content -- Wraps (custom styling), etc.
+--------------------------------------------------------------*/
+.big-text {
+	font-size: 30px;
+	font-weight: 900;
+	font-family: var(--global-font-family);
+	text-align: center;
+	color: var(--primary-color);
+}
+.wrap {
+	position: relative;
+}
+#bond {
+	display: block;
+	margin: auto;
+	width: 100%;
+	max-width:var(--content-width);
+	padding:25px;
+}
+.bar {
+	background-color: var(--primary-color);
+	height: 2px;
+    width: 80%;
+    margin: auto;
+}
+.divider {
+	background-color: var(--secondary-color);
+	height: 2px;
+    width: 100%;
+    margin: auto;
+}
+
+/*--------------------------------------------------------------
+## Flip Boxes
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+## Actions / Directs
+--------------------------------------------------------------*/
+.action {
+	display: block;
+    margin: auto;
+}
+#action-btn {
+	font-weight: 900;
+	font-size: 24px;
+}
+/*--------------------------------------------------------------
+## Footer
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+## List
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+## Testimonials / Slider
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+## Blog
+--------------------------------------------------------------*/
+.related-posts-container {
+	margin: 0 auto 2em;
+	max-width: var(--content-width);
+	padding: 20px;
+}
+.related-posts {
+	display: flex;
+	justify-content: space-between;
+	padding: 20px;
+}
+.related-post {
+	padding: 10px;
+}
+.related-title {
+	margin-top: 10px;
+}
+.read-more {
+	margin-right: auto;
+    margin-left: auto;
+    max-width: var(--content-width);
+    display: block;
+}
+.entry-graphic .blog-image{
+	width: 35%;
+    margin-bottom: 20px;
+    margin: auto;
+}
+
+/*--------------------------------------------------------------
+## Form
+--------------------------------------------------------------*/
+.gform_wrapper {
+	margin: auto !important;
+}
+#gform_1 .gfield_label {
+	font-family: var(--global-font-family);
+}
+#gform_submit_button_1 {
+	background-color: var(--primary-color);
+	font-family: var(--global-font-family-bold);
+}
