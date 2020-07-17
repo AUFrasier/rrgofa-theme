@@ -43,7 +43,40 @@ h6 {font-size: 12px !important;}
 	margin-top: 1em;
 	margin-bottom: 1em;
 }
-
+h2.entry-title {
+	font-family: var(--highlight-font-family) !important;
+	font-weight: 200 !important;
+}
+h2.entry-title a{
+	color: var(--color-theme-primary) !important;
+}
+.entry-title, .page-title {
+	font-family: var(--highlight-font-family);
+    font-weight: 700;
+    font-style: normal;
+    color: #393b3d;
+    font-variant: normal;
+	text-transform: uppercase;
+	font-size: 38px;
+}
+.entry-content h2 {
+	font-family: var(--highlight-font-family);
+	font-weight: 900;
+	padding-bottom:20px;
+    font-style: normal;
+    color: #393b3d;
+    font-variant: normal;
+	text-transform: uppercase;
+}
+.entry-content h3 {
+	font-family: var(--highlight-font-family);
+	font-weight: 900;
+	padding-bottom:20px;
+    font-style: normal;
+    color: #393b3d;
+    font-variant: normal;
+	text-transform: uppercase;
+}
 dfn,
 cite,
 em,

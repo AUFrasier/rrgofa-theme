@@ -86,35 +86,36 @@ function create_testimonials() {
 		'public'        => true,
 		'menu_position' => 5,
 		'menu_icon'     => 'dashicons-awards',
-		'supports'      => array( 'title' ),
+		'supports'      => array( 'title', 'editor' ),
+		'rewrite'       => array( 'slug' => 'testimonial' ),
 		'has_archive'   => true,
 	  );
-	  register_post_type( 'testimonial', $args ); 
+	  register_post_type( 'mad360_testimonial', $args ); 
 }
 // Hooking up our function to theme setup
 add_action( 'init', 'create_testimonials' );
 
 function add_author_metabox(){
     add_meta_box(
-        "author_meta_box",
+        "uxi_testimonial_author",
         "Author",
         "show_custom_metabox_author",
-        "testimonial"
+        "mad360_testimonial"
     );
 }
 add_action("add_meta_boxes", "add_author_metabox");
 
 function show_custom_metabox_author(){
 	global $post;
-    $value = get_post_meta($post->ID, "author_meta_box_nonce", true);
+    $value = get_post_meta($post->ID, "uxi_testimonial_author_nonce", true);
 
-    echo '<input type="text" name="author_meta_box_nonce" value="'. $value .'">';
+    echo '<input type="text" id="uxi_testimonial_author_nonce" name="uxi_testimonial_author_nonce" value="'. $value .'">';
  }
 
  function on_save_post_author($post_id){
-    $meta_value = isset($_POST["author_meta_box_nonce"]) ?  $_POST["author_meta_box_nonce"]  : false;
+    $meta_value = isset($_POST["uxi_testimonial_author_nonce"]) ?  $_POST["uxi_testimonial_author_nonce"]  : false;
 
-    update_post_meta($post_id,"author_meta_box_nonce", $meta_value);
+    update_post_meta($post_id,"uxi_testimonial_author_nonce", $meta_value);
  }
  add_action("save_post", "on_save_post_author");
 
@@ -124,7 +125,7 @@ function show_custom_metabox_author(){
         "content_meta_box",
         "Content",
         "show_custom_metabox_content",
-        "testimonial"
+        "mad360_testimonial"
     );
 }
 add_action("add_meta_boxes", "add_content_metabox");
@@ -179,3 +180,8 @@ function wpb_adding_scripts() {
 }
 	  
 add_action( 'wp_enqueue_scripts', 'wpb_adding_scripts' );
+
+function custom_excerpt_length( $length ) {
+	return 20;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );

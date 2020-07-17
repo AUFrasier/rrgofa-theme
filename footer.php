@@ -16,12 +16,17 @@ namespace WP_Rig\WP_Rig;
 <footer id="colophon" class="site-footer">
 	<div class="footer-container">
 		<div class="footer-content container-fluid">
-		<?php get_template_part('template-parts/footer/footer-contact') ?>
-		<?php get_template_part('template-parts/footer/footer-logo') ?>
-		<?php get_template_part('template-parts/partials/action-button') ?>
+		<?php //get_template_part('template-parts/footer/footer-contact') ?>
+		<?php //get_template_part('template-parts/footer/footer-logo') ?>
+		<?php //get_template_part('template-parts/partials/action-button') ?>
+		<?php get_template_part( 'template-parts/footer/footer-menu' ); ?>
+		<div class="row sub-footer">
+		<?php get_template_part( 'template-parts/footer/copyright-bar' ); ?>
+		<?php get_template_part( 'template-parts/footer/footer-social' ); ?>
+		</div>
 		</div><!-- .footer-content -->
 	</div><!-- .footer-container -->
-	<?php get_template_part( 'template-parts/footer/copyright-bar' ); ?>
+	
 </footer><!-- #colophon -->
 </div><!-- #page -->
 <?php wp_footer(); ?>

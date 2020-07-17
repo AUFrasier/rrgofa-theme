@@ -25,6 +25,27 @@ if ( is_404() ) {
 	<?php
 } elseif ( is_home() && ! is_front_page() ) {
 	?>
+		<div class="sub-page-header">
+			<div class="container-fluid">
+				<div id="bond">     
+					<section class="text-center">
+						<p class="sub-page-heading">GEORGIA ROOF REPAIR</p>
+						<p class="sub-page-subheading">
+							<span class="sub-page-subheading-inner">
+								<span class="sub-page-subheading-line">DON’T RISK A LEAKING ROOF – CALL RRG</span>
+							</span>
+						</p>
+					</section>
+					<div class="action">
+						<a href="/contact-us/">
+							<div id="action-btn">
+								<span class="sub-page-button-text header-font">Schedule an Inspection!</span>
+							</div>
+						</a>
+					</div><!-- .action -->
+				</div>
+			</div>
+		</div>
 	<header class="page-header">
 		<h1 class="page-title">
 			<?php single_post_title(); ?>

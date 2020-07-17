@@ -4,11 +4,97 @@
 
 }
 @media (--mobile-device-tablet) {
-
+    .mobile-hd {
+        display: block !important;
+    }
+    .tablet-desktop-hd {
+        display: none !important;
+    }
+    .mobile-navigation {
+        display: block !important;
+	}
+	.main-navigation {
+        display: none !important;
+    }
+    .branding-wrapper {
+        max-width: 90px;
+    }
+    .site-branding {
+        padding: 15px;
+    }
+    .actions {
+        display:none;
+    }
+    .hero-container {
+        background-image: url(/wp-content/uploads/2018/05/hero2-5afb1c89b711d.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    #mainoo-video {
+        display:none;
+    }
+    .jumbotron-heading {
+        font-size: 15px !important;
+    }
+    .jumbotron-subheading {
+        font-size: 30px;
+    }
+    .hero-action {
+        max-width: 80%;
+    }
+    .footer-menu {
+        display: block !important;
+        text-align: center;
+    }
+    .sub-footer {
+        justify-content: center;
+    }
+    .form-wrapper #gform_wrapper_3 .inline-form-4ths .gform_footer {
+        width: 100%;
+    }
+    .form-wrapper #gform_wrapper_3 .inline-form-4ths .gform_body {
+        width: 100%;
+    }
+    .form-wrapper #gform_wrapper_3 [class*="inline-form-"] .gform_body, .form-wrapper #gform_wrapper_3 [class*="inline-form-"] .gform_footer {
+        display: block;
+    }
+    .form-wrapper #gform_wrapper_3 #gform_3 div #gform_fields_3 {
+        display: block;
+    }
+    .sub-page-header {
+        padding: 0;
+    }
 }
 
 @media (--mobile-device-phone-L) {
-
+    .testimonial-wrapper {
+        padding:0;
+    }
+    .heading {
+        font-size: 24px;
+    }
+    .subheading {
+        font-size: 20px;
+    }
+    .sub-page-subheading-line {
+        font-size: 20px;
+    }
+    .sub-page-heading {
+        font-size: 24px;
+    }
+    .post #bond {
+        margin-top: 30px;
+    }
+    .post #bond, .entry-header {
+        padding: 0px !important;
+    }
+    .entry-title,.entry-summary {
+        text-align: center !important;
+    }
+    .big-text {
+        font-size: 24px;
+    }
 }
 
 @media (--mobile-device-phone-S) {

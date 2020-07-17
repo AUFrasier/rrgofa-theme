@@ -9,4 +9,4 @@ namespace WP_Rig\WP_Rig;
 
 ?>
 
-<div class="bar"></div><!-- .bar -->
+<div class="bar mt-5"></div><!-- .bar -->

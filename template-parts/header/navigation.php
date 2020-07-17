@@ -15,7 +15,6 @@ if ( ! wp_rig()->is_primary_nav_menu_active() ) {
 
 <nav class="site-navigation">
    <?php 
-      get_template_part( 'template-parts/header/mobile-navigation');
       get_template_part( 'template-parts/header/main-navigation');
    ?>
   

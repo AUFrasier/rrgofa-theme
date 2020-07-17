@@ -11,11 +11,11 @@ global $post;
 ?>
 
 <div class="entry-summary">
-	<div class="entry-graphic">
+	<!--<div class="entry-graphic">
 	<?php
-		get_template_part( 'template-parts/blog/blog-attached-image');
+		//get_template_part( 'template-parts/blog/blog-attached-image');
 	?>
-	</div>
+	</div>-->
 	<?php the_excerpt(); ?>
 	<a class="read-more" href="<?php the_permalink();?>">Read more...</a>
 </div><!-- .entry-summary -->

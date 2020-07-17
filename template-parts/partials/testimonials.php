@@ -9,13 +9,13 @@ namespace WP_Rig\WP_Rig;
 
 ?>
 
-<div class="swiper-container">
-	<div class="swiper-wrapper">
+<div class="testimonial-container">
+	<div class="testimonial-wrapper row align-items-top justify-content-center">
 		<?php
 			// args
 			$args = array(
-				'numberposts'	=> -1,
-				'post_type'		=> 'testimonial'
+				'posts_per_page'	=> 3,
+				'post_type'		=> 'mad360_testimonial'
 			);
 			// query
 			$the_query = new \WP_Query( $args );
@@ -23,10 +23,25 @@ namespace WP_Rig\WP_Rig;
 			<?php if( $the_query->have_posts() ): ?>
 			   
 				<?php while( $the_query->have_posts() ) : $the_query->the_post(); ?>
-				<div class="swiper-slide"> 
-					<div class="testimonial-info">
-						<span class="testimonial-author"><?php echo get_post_meta(get_the_ID(), 'author_meta_box_nonce', true); ?></span>
-						<p class="testimonial-content"><?php echo get_post_meta(get_the_ID(), 'content_meta_box_nonce', true); ?></p>
+				<div class="testimonial col-lg-4 col-md-12"> 
+					<div class="testimonial-info d-block m-3">
+						<span class="testimonial-title mb-3">
+						<a class="more" style="color: white !important;" href="<?php the_permalink();?>">"<?php echo the_title(); ?>"</a>
+						</span>
+						<span class="testimonial-content">
+							<?php echo the_excerpt(); ?>
+						</span>
+						<span class="testimonial-author d-block mb-1">
+							<?php echo get_post_meta(get_the_ID(), 'uxi_testimonial_author_nonce', true); ?>
+						</span>
+						<?php
+						$excerpt = get_the_excerpt();  
+						if(strlen($excerpt) > 20) {?>
+							<span>
+								<a class="more" style="color: white !important; text-decoration: underline;" href="<?php the_permalink();?>">Read More</a>
+							</span>
+						<?php } ?>
+						
 					</div>
 				</div>   
 				<?php endwhile; ?>
@@ -35,6 +50,4 @@ namespace WP_Rig\WP_Rig;
 
 			<?php wp_reset_query();	 // Restore global post data stomped by the_post(). ?>
 	</div>
-	<div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
-</div><!-- .swiper-container -->
+</div><!-- .testimonial-container -->

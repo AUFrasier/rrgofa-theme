@@ -27,6 +27,7 @@ use function wp_nav_menu;
 class Component implements Component_Interface, Templating_Component_Interface {
 
 	const PRIMARY_NAV_MENU_SLUG = 'primary';
+	const SECONDARY_NAV_MENU_SLUG = 'secondary';
 
 	/**
 	 * Gets the unique identifier for the theme component.
@@ -56,6 +57,8 @@ class Component implements Component_Interface, Templating_Component_Interface {
 		return [
 			'is_primary_nav_menu_active' => [ $this, 'is_primary_nav_menu_active' ],
 			'display_primary_nav_menu'   => [ $this, 'display_primary_nav_menu' ],
+			'is_secondary_nav_menu_active' => [ $this, 'is_secondary_nav_menu_active' ],
+			'display_secondary_nav_menu'   => [ $this, 'display_secondary_nav_menu' ],
 		];
 	}
 
@@ -66,6 +69,7 @@ class Component implements Component_Interface, Templating_Component_Interface {
 		register_nav_menus(
 			[
 				static::PRIMARY_NAV_MENU_SLUG => esc_html__( 'Primary', 'wp-rig' ),
+				static::SECONDARY_NAV_MENU_SLUG => esc_html__( 'Secondary', 'wp-rig' ),
 			]
 		);
 	}
@@ -114,6 +118,10 @@ class Component implements Component_Interface, Templating_Component_Interface {
 		return (bool) has_nav_menu( static::PRIMARY_NAV_MENU_SLUG );
 	}
 
+	public function is_secondary_nav_menu_active() : bool {
+		return (bool) has_nav_menu( static::SECONDARY_NAV_MENU_SLUG );
+	}
+
 	/**
 	 * Displays the primary navigation menu.
 	 *
@@ -126,6 +134,16 @@ class Component implements Component_Interface, Templating_Component_Interface {
 		}
 
 		$args['theme_location'] = static::PRIMARY_NAV_MENU_SLUG;
+
+		wp_nav_menu( $args );
+	}
+
+	public function display_secondary_nav_menu( array $args = [] ) {
+		if ( ! isset( $args['container'] ) ) {
+			$args['container'] = 'ul';
+		}
+
+		$args['theme_location'] = static::SECONDARY_NAV_MENU_SLUG;
 
 		wp_nav_menu( $args );
 	}

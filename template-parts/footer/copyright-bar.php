@@ -11,7 +11,6 @@ namespace WP_Rig\WP_Rig;
 
 <div class="footer-copyright-bar">
     <div class="copyright-bar-wrapper">
-        <span></span>
-        <span>Designed By: <a href="https://www.artunlimitedusa.com" target="_blank">Art Unlimited LLC</a></span>
+        <small>©2020 Roofing Resources of Georgia | All rights reserved.</small>
     </div>
 </div><!-- .footer-copyright-bar -->

@@ -7,8 +7,53 @@
 
 namespace WP_Rig\WP_Rig;
 
-?>
+if(is_home()) { ?>
+	<article id="post-<?php the_ID(); ?>" <?php post_class( 'entry' ); ?>>
+		<div class="container-fluid">
+			<div id="bond">
+				<?php
+					$img = '';
+					if ( has_post_thumbnail() ) {
+						$img = get_the_post_thumbnail( $post->ID, 'related-thumbnail', array( 'title' => $title, 'alt' => $title ) );
+					}
+					else {
+						$attachments = get_children( array('post_parent' => $post->ID, 'post_status' => 'inherit', 'post_type' => 'attachment', 'post_mime_type' => 'image',  'numberposts' => 1 ) );
 
+						if ( count( $attachments ) > 0 ) {
+							$img = array_shift( $attachments );
+							$img = wp_get_attachment_image( $img->ID, 'related-thumbnail', true );
+						}
+					}
+				?>
+				<?php if ( $img != '' ) {?>
+					<div class="row align-items-center">
+						<div class="col-lg-4">
+							<div class="entry-graphic">
+								<a href="<?php the_permalink() ?>" rel="bookmark">
+									<?php echo $img; ?>
+								</a>
+								<?php
+									//get_template_part( 'template-parts/blog/blog-attached-image');
+								?>
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<?php get_template_part( 'template-parts/content/entry_header', get_post_type() ); ?>
+							<?php get_template_part( 'template-parts/content/entry_summary', get_post_type() ); ?>
+						</div>
+					</div>
+				<?php } else {?>
+					<div class="row justify-content-center">
+						<div class="col-lg-12">
+							<?php get_template_part( 'template-parts/content/entry_header', get_post_type() ); ?>
+							<?php get_template_part( 'template-parts/content/entry_summary', get_post_type() ); ?>
+						</div>
+					</div>
+				<?php } ?>
+			</div>
+		</div>	
+	</article><!-- #post-<?php the_ID(); ?> -->
+<?php } else { ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'entry' ); ?>>
 	<?php
 	get_template_part( 'template-parts/content/entry_header', get_post_type() );
@@ -22,7 +67,7 @@ namespace WP_Rig\WP_Rig;
 
 	?>
 </article><!-- #post-<?php the_ID(); ?> -->
-
+<?php } ?>
 <?php
 if ( is_singular( get_post_type() ) ) {
 	// Show post navigation only when the post type is 'post' or has an archive.

@@ -5,17 +5,19 @@
  * @link: https://developer.mozilla.org/en-US/docs/Web/CSS/--*
  **/
  @import url('https://fonts.googleapis.com/css?family=Muli:400,800,900&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 :root {
 	--global-font-color: black;
-	--global-font-family: "Muli", sans-serif;
-	--highlight-font-family: "Muli", sans-serif;
+	--global-font-family: 'Open Sans', 'Arial', sans-serif;
+	--highlight-font-family: 'Ubuntu', sans-serif;
+	--menu-font: 'Ubuntu', sans-serif;
 	--global-font-size: 18;
 	--global-font-line-height: 1.4;
-	--content-width: 80%;
+	--content-width: 1140px;
 	--dropdown-symbol-width: 0.7em;
 
 	/* Custom editor colors */
-	--color-theme-primary: #e36d60;
+	--color-theme-primary: rgb(24, 71, 161);
 	--color-theme-secondary: #41848f;
 	
 	--color-theme-red: #c0392b;
@@ -29,14 +31,14 @@
 	--color-custom-gold: #f18f39;
 
 	/* Custom theme colors */ 
-	--primary-color: #CE1212;
-	--secondary-color: #D9D9D9;
+	--primary-color: rgb(24, 71, 161);
+	--secondary-color: rgb(111, 113, 116);
 	--tertiary-color: #808080;
 
-	--color-link: #CE1212;
-	--color-link-visited: black;
-	--color-link-active: #CE1212;
-	--color-link-hover: #CE1212;
+	--color-link: black;
+	--color-link-visited: rgb(24, 71, 161);
+	--color-link-active: rgb(24, 71, 161);
+	--color-link-hover: rgb(24, 71, 161);
 
 	--color-quote-border: #000;
 	--color-quote-citation: #6c7781;

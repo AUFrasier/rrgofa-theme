@@ -216,10 +216,13 @@ select {
 
 .site-branding {
 	text-align: center;
-	float: left;
 	padding: 30px;
 }
-
+.branding-wrapper {
+	width: 100%;
+    max-width: 225px;
+    margin: auto;
+}
 .site-title {
 	margin: 0 1em;
 	font-family: var(--highlight-font-family);
@@ -260,11 +263,10 @@ select {
 .main-navigation {
 	clear: both;
 	padding: 0 1em;
-	font-family: var(--highlight-font-family);
+	font-family: var(--menu-font);
 	font-stretch: condensed;
 	width: 100%;
 	margin: auto;
-	background-color: var(--color-custom-five);
 }
 .main-navigation li {
 	position: relative;
@@ -272,30 +274,7 @@ select {
     text-align: center;
     z-index: 1;
 }
-.main-navigation li:after {
-	content: " ";
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: -20px;
-    margin-right: 0px;
-    z-index: -1;
-    transform-origin: bottom left;
-    -ms-transform: skew(-30deg, 0deg);
-    -webkit-transform: skew(-30deg, 0deg);
-    transform: skew(-30deg, 0deg);
-}
-.sub-menu li:after {
-	content: none;
- }
-.main-navigation li:hover:after {
-	background: #f26829;
-}
 .main-navigation .sub-menu {
-	background: #f26829;
-    width: 80%;
     position: absolute;
 }
 .main-navigation .sub-menu li a{
@@ -539,7 +518,6 @@ select {
 
 .site-branding {
 	text-align: center;
-	float: left;
 	padding: 30px;
 }
 
@@ -583,7 +561,7 @@ select {
 .main-navigation {
 	clear: both;
 	padding: 0 1em;
-	font-family: var(--highlight-font-family);
+	font-family: var(--menu-font);
 	font-stretch: condensed;
 	width: 100%;
 	margin: auto;
@@ -595,12 +573,15 @@ select {
     z-index: 1;
 }
 .main-navigation .sub-menu {
-	background: #f26829;
-    width: 80%;
-    position: absolute;
+    width: 160px;
+	position: absolute;
+	background-color: var(--color-theme-primary);
 }
 .main-navigation .sub-menu li a{
 	padding:5px;
+	color: white !important;
+	text-align: left;
+	padding-left: 20px;
 }
 .main-navigation a {
 	display: block;
@@ -631,9 +612,9 @@ select {
     display: none;
 }
 #nav-bars {
-	position: absolute;
-    top: 25px;
-    right: 25px;
+    position: relative;
+    top: 22px;
+    left: 16px;
 	z-index: 999;
 	cursor: pointer;
 }
@@ -662,7 +643,7 @@ select {
 }
 .mobile-navigation label b i {
 	display: block;
-	background: black;
+	background:var(--color-theme-primary);
 	width: 40px;
 	height: 5px;
 	position: absolute;
@@ -680,7 +661,7 @@ select {
 }
 .mobile-navigation menu {
 	background: white;
-	width: 100%;
+	width: 200px;
 	height: 100%;
 	opacity: 0;
 	-webkit-transition: opacity .3s ease;
@@ -688,7 +669,8 @@ select {
 	position: fixed;
 	z-index: 998;
 	top: 0;
-    padding: 0;
+	padding: 0;
+    padding-top: 60px;
     margin: 0;
 }
 .mobile-navigation menu li {
@@ -755,7 +737,6 @@ select {
 	font-family: var(--highlight-font-family);
 	font-stretch: condensed;
 }
-
 @media (--content-query) {
 
 	.site-main .comment-navigation,
@@ -769,6 +750,7 @@ select {
 
 .nav-links {
 	display: flex;
+	margin: auto;
 }
 
 .comment-navigation .nav-previous,

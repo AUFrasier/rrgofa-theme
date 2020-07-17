@@ -14,7 +14,11 @@ get_header();
 wp_rig()->print_styles( 'wp-rig-content' );
 
 ?>
-	<main id="primary" class="site-main">
+	<?php if(is_home()) { ?>
+		<main id="primary" class="site-main" style="background-color: rgb(247, 247, 247);">
+	<?php } else {?>
+		<main id="primary" class="site-main">
+	<?php } ?>
 		<?php
 
 		while ( have_posts() ) {
@@ -25,5 +29,5 @@ wp_rig()->print_styles( 'wp-rig-content' );
 		?>
 	</main><!-- #primary -->
 <?php
-get_sidebar();
+//get_sidebar();
 get_footer();

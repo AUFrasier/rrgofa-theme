@@ -22,10 +22,11 @@ if ( is_home() ) {
 	<main id="primary" class="site-main">
 		<?php
 		get_template_part( 'template-parts/sections/wrap', '1' );
+		get_template_part( 'template-parts/partials/bar');
 		get_template_part( 'template-parts/sections/wrap', '2' );
 		get_template_part( 'template-parts/sections/wrap', '3' );
-		get_template_part( 'template-parts/sections/wrap', '4' );
-		get_template_part( 'template-parts/sections/wrap', '5' );
+		//get_template_part( 'template-parts/sections/wrap', '4' );
+		//get_template_part( 'template-parts/sections/wrap', '5' );
 		?>
 	</main><!-- #primary -->
 <?php
