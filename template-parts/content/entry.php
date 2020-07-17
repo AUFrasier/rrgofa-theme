@@ -55,15 +55,63 @@ if(is_home()) { ?>
 	</article><!-- #post-<?php the_ID(); ?> -->
 <?php } else { ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'entry' ); ?>>
-	<?php
+	<?php if(is_page('about-us') || is_page('know-your-pro') || is_page('north-georgia-damage-claims') || is_page('showcase') || is_page('types-of-roofs')) { ?>
+		<div class="sub-page-header">
+			<div class="container-fluid">
+				<div id="bond">     
+					<section class="text-center">
+						<p class="sub-page-heading">GEORGIA ROOF REPAIR</p>
+						<p class="sub-page-subheading">
+							<span class="sub-page-subheading-inner">
+								<span class="sub-page-subheading-line">DON’T RISK A LEAKING ROOF – CALL RRG</span>
+							</span>
+						</p>
+					</section>
+					<div class="action">
+						<a href="/contact-us/">
+							<div id="action-btn">
+								<span class="sub-page-button-text header-font">Schedule an Inspection!</span>
+							</div>
+						</a>
+					</div><!-- .action -->
+				</div>
+			</div>
+		</div>
+	<?php } elseif (is_page('financing')) { ?>
+		<div class="sub-page-header">
+			<div class="container-fluid">
+				<div id="bond">     
+					<section class="text-center">
+						<p class="sub-page-heading">PROFESSIONAL • RELIABLE • AFFORDABLE</p>
+						<p class="sub-page-subheading">
+							<span class="sub-page-subheading-inner">
+								<span class="sub-page-subheading-line">Roofing Resources of Georgia</span>
+							</span>
+						</p>
+					</section>
+					<div class="action">
+						<a href="/contact-us/">
+							<div id="action-btn">
+								<span class="sub-page-button-text header-font">Learn more about our financing program!</span>
+							</div>
+						</a>
+					</div><!-- .action -->
+				</div>
+			</div>
+		</div>
+	<?php }
 	get_template_part( 'template-parts/content/entry_header', get_post_type() );
 
 	if ( is_search() || is_home() ) {
 		get_template_part( 'template-parts/content/entry_summary', get_post_type() );
 		
-	} else {
-		get_template_part( 'template-parts/content/entry_content', get_post_type() );
-	}
+	} else { ?>
+		<div class="container-fluid">
+			<div id="bond">  
+				<?php get_template_part( 'template-parts/content/entry_content', get_post_type() ); ?>
+		    </div>
+		</div>
+	<?php }
 
 	?>
 </article><!-- #post-<?php the_ID(); ?> -->

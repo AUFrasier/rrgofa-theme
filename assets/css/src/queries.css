@@ -86,13 +86,16 @@
     .post #bond {
         margin-top: 30px;
     }
-    .post #bond, .entry-header {
+    #post-369 #bond, .post #bond, .entry-header {
         padding: 0px !important;
     }
     .entry-title,.entry-summary {
         text-align: center !important;
     }
     .big-text {
+        font-size: 24px;
+    }
+    .entry-title  {
         font-size: 24px;
     }
 }

@@ -294,7 +294,10 @@
 .testimonial-title {
 	display: block;
 }
-
+#post-369 .testimonial-title {
+	font-weight: 100;
+	color: var(--primary-color) !important;
+}
 /*--------------------------------------------------------------
 ## Blog
 --------------------------------------------------------------*/

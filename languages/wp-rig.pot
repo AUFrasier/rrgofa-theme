@@ -202,11 +202,11 @@ msgstr ""
 msgid "No theme component with the slug %s exists."
 msgstr ""
 
-#: template-parts/content/entry-attachment.php:33, template-parts/content/entry.php:77
+#: template-parts/content/entry-attachment.php:33, template-parts/content/entry.php:125
 msgid "Previous:"
 msgstr ""
 
-#: template-parts/content/entry-attachment.php:43, template-parts/content/entry.php:78
+#: template-parts/content/entry-attachment.php:43, template-parts/content/entry.php:126
 msgid "Next:"
 msgstr ""
 
