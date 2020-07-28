@@ -63,7 +63,10 @@
         display: block;
     }
     .sub-page-header {
-        padding: 0;
+        padding: 15px;
+    }
+    #action-btn {
+        margin-bottom: 20px;
     }
 }
 
@@ -86,8 +89,15 @@
     .post #bond {
         margin-top: 30px;
     }
-    #post-369 #bond, .post #bond, .entry-header {
+    #post-369 #bond, .post #bond, .entry-header, .page #bond {
         padding: 0px !important;
+    }
+    #template-bond {
+        max-width: 100% !important;
+        padding: 20px 0px !important;
+    }
+    .form-container-roofing-services #gform_1 {
+        padding: 10px;
     }
     .entry-title,.entry-summary {
         text-align: center !important;
@@ -97,6 +107,9 @@
     }
     .entry-title  {
         font-size: 24px;
+    }
+    .template-parallax {
+        background: #292a2c !important;
     }
 }
 

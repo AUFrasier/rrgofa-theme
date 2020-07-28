@@ -180,8 +180,15 @@ function wpb_adding_scripts() {
 }
 	  
 add_action( 'wp_enqueue_scripts', 'wpb_adding_scripts' );
-
-function custom_excerpt_length( $length ) {
+function custom_excerpt_length_20( $length ) {
 	return 20;
 }
-add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+function custom_excerpt_length_50( $length ) {
+	return 50;
+}
+function wpdocs_excerpt_more( $more ) {
+	return '<span><a class="read-more" style="color: rgb(24, 71, 161) !important;" href="'.get_the_permalink().'" rel="nofollow">...Read More</a></span>';
+}
+if (is_front_page()) {                             
+	add_filter( 'excerpt_length', 'custom_excerpt_length_20', 999 );
+}

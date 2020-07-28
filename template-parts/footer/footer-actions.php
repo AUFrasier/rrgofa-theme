@@ -11,7 +11,17 @@ namespace WP_Rig\WP_Rig;
 
 
 <div class="footer-actions-wrapper">
-	<div class="action">
-		<a href=""><div class="footer-btn"><span></span></div></a>
+	<div class="footer-action">
+		<a href="/contact-us">
+			<div id="footer-btn">
+				<span>
+					<?php if(is_page('financing')) { ?>
+						<span class="button-text body-font">Learn more about our financing program!</span>
+					<?php } else { ?>
+						<span class="button-text body-font">Schedule an Inspection!</span>
+					<?php } ?>
+				</span>
+			</div>
+		</a>
 	</div>
 </div><!-- .footer-actions-wrapper -->

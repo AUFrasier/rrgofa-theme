@@ -5,7 +5,8 @@ namespace WP_Rig\WP_Rig;
 get_header();
 
 wp_rig()->print_styles( 'wp-rig-content' );
-
+add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
+add_filter( 'excerpt_length', 'custom_excerpt_length_50', 999 );
 ?>
 	<main id="primary" class="site-main">
         <?php
@@ -47,10 +48,9 @@ wp_rig()->print_styles( 'wp-rig-content' );
                             <?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
                                 <div class="m-3">
                                     <a href="<?php the_permalink(); ?>" class="entry-title testimonial-title mb-4" target="_blank">
-                                        <?php echo get_the_title(); ?>
+                                        "<?php echo get_the_title(); ?>"
                                     </a>
                                     <div class="testimonial-content-page"><?php the_excerpt(); ?></div>
-                                    <a class="read-more" href="<?php the_permalink();?>">Read more...</a>
                                 </div>
                             <?php
                                 endwhile;

@@ -15,10 +15,14 @@ namespace WP_Rig\WP_Rig;
 
 <footer id="colophon" class="site-footer">
 	<div class="footer-container">
+		<?php 
+			if (!is_page('contact-us') && !is_front_page()) {
+				get_template_part('template-parts/footer/footer-actions');
+			} 
+		?>
 		<div class="footer-content container-fluid">
 		<?php //get_template_part('template-parts/footer/footer-contact') ?>
 		<?php //get_template_part('template-parts/footer/footer-logo') ?>
-		<?php //get_template_part('template-parts/partials/action-button') ?>
 		<?php get_template_part( 'template-parts/footer/footer-menu' ); ?>
 		<div class="row sub-footer">
 		<?php get_template_part( 'template-parts/footer/copyright-bar' ); ?>

@@ -77,30 +77,8 @@ if(is_home()) { ?>
 				</div>
 			</div>
 		</div>
-	<?php } elseif (is_page('financing')) { ?>
-		<div class="sub-page-header">
-			<div class="container-fluid">
-				<div id="bond">     
-					<section class="text-center">
-						<p class="sub-page-heading">PROFESSIONAL • RELIABLE • AFFORDABLE</p>
-						<p class="sub-page-subheading">
-							<span class="sub-page-subheading-inner">
-								<span class="sub-page-subheading-line">Roofing Resources of Georgia</span>
-							</span>
-						</p>
-					</section>
-					<div class="action">
-						<a href="/contact-us/">
-							<div id="action-btn">
-								<span class="sub-page-button-text header-font">Learn more about our financing program!</span>
-							</div>
-						</a>
-					</div><!-- .action -->
-				</div>
-			</div>
-		</div>
 	<?php }
-	get_template_part( 'template-parts/content/entry_header', get_post_type() );
+	//get_template_part( 'template-parts/content/entry_header', get_post_type() );
 
 	if ( is_search() || is_home() ) {
 		get_template_part( 'template-parts/content/entry_summary', get_post_type() );
@@ -108,6 +86,7 @@ if(is_home()) { ?>
 	} else { ?>
 		<div class="container-fluid">
 			<div id="bond">  
+			    <?php get_template_part( 'template-parts/content/entry_header', get_post_type() ); ?>
 				<?php get_template_part( 'template-parts/content/entry_content', get_post_type() ); ?>
 		    </div>
 		</div>

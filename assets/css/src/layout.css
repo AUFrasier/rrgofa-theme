@@ -137,11 +137,13 @@
 	text-align: center;
 	color: var(--secondary-color);
 	margin-top: 40px;
+	font-variant: normal;
+    text-transform: uppercase;
 }
 .heading {
 	font-size: 40px;
 	font-weight: 900;
-	font-family: var(--highlight-font-family);
+	font-family: 'Ubuntu', 'Arial', sans-serif;
 	text-align: center;
 	color: white;
 }
@@ -150,23 +152,23 @@
     font-size: 22px;
     font-variant: normal;
 	text-transform: uppercase;
-	font-family: var(--highlight-font-family);
+	font-family: 'Ubuntu', 'Arial', sans-serif;
     font-weight: 300;
     font-style: normal;
 }
 .sub-page-heading {
 	font-size: 24px;
 	font-weight: 500;
-	font-family: var(---highlight-font-family);
+	font-family: 'Ubuntu', 'Arial', sans-serif;
 	text-align: center;
 	color: white;
 }
 .sub-page-subheading-line {
     color: rgb(255, 255, 255);
-    font-size: 40px;
+    font-size: 34px;
     font-variant: normal;
 	text-transform: uppercase;
-	font-family: var(--highlight-font-family);
+	font-family: 'Ubuntu', 'Arial', sans-serif;
     font-weight: 800;
     font-style: normal;
 }
@@ -191,6 +193,13 @@
 	max-width:var(--content-width);
 	padding:25px;
 }
+#template-bond {
+	display: block;
+	margin: auto;
+	width: 100%;
+	max-width:1210px;
+	padding:25px;
+}
 .bar {
 	background-color: var(--primary-color);
 	height: 5px;
@@ -204,8 +213,146 @@
     margin: auto;
 }
 .editor-content {
-	color: rgb(57, 59, 61);
-	font-size: 16px;
+	color: rgb(57, 59, 61) !important;
+	font-size: 14px;
+    text-align: center;
+}
+.sub-page-header-roofing-services {
+	background-image: linear-gradient(0deg, rgba(24, 71, 161, 0.51) 0%, rgba(24, 71, 161, 0.52) 100%), url(/wp-content/uploads/2020/01/image-4-5e2f478e91b40.jpg);
+    background-position: center bottom;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.form-container-roofing-services #gform_1{
+	background-color: rgba(255, 255, 255, 0.8);
+    padding-bottom: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 20px;
+}
+.form-container-roofing-services #gform_wrapper_1{
+	width: 100%;
+    max-width: 550px;
+    padding-top: 50px;
+}
+.sub-page-header-roofing-services .subheading{
+	padding-right: 30px;
+    padding-top: 100px;
+    max-width: 500px;
+	width: 100%;
+}
+#gform_1 .gform_title {
+	font-family: 'Ubuntu', 'Arial', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color: #6f7174;
+    font-variant: normal;
+	text-transform: uppercase;
+	margin-bottom: 13px;
+    font-size: 24px;
+}
+#gform_1 .gfield_label {
+	font-family: 'Ubuntu', 'Arial', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color: #6f7174;
+    font-variant: normal;
+	text-transform: uppercase;
+	margin-bottom: 13px;
+    font-size: 20px;
+}
+
+#gform_1 #gform_submit_button_1 {
+	background-color: rgb(80, 72, 61);
+	background-image: linear-gradient(0deg, transparent 10%, transparent 90%);
+	border-radius: 0px;
+	color: #fff !important;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+	font-weight: bold;
+	width:100%;
+	height:50px;
+}
+.template-action {
+	background-color: rgba(0, 0, 0, 0.09);
+    background-image: linear-gradient(0deg, transparent 10%, transparent 90%);
+    border-top: 1px solid rgb(255, 255, 255);
+    border-right: 1px solid rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(255, 255, 255);
+    border-left: 1px solid rgb(255, 255, 255);
+    border-radius: 0px;
+	padding: 15px 40px;
+	text-align: center;
+	max-width: 300px;
+    margin: auto;
+    width: 100%;
+}
+#template-action-action-btn span {
+	color: #fff !important;
+	font-weight: normal;
+	font-size: 20px;
+}
+.template-wrap-1 {
+    background-color: rgb(24, 71, 161);
+    padding-bottom: 25px;
+    padding-top: 25px;
+}
+.template-wrap-2 {
+	background-color: rgb(230, 230, 230);
+    border-bottom: 1px solid rgb(217, 217, 217);
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+.template-ul {
+	margin: 20px 0px;
+}
+.template-parallax {
+	background-image: linear-gradient(90deg, rgb(41, 42, 44) 43%, transparent 43%), url(/wp-content/uploads/2020/02/treedam-5e5042b89d1c5.jpg);
+    background-position: right center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+.template-parallax .template-text-widget {
+	background-color: rgba(255, 255, 255, 0.9);
+    margin-top: 40px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+}
+
+.template-parallax .template-text-widget p {
+    font-style: normal;
+	color: #6f7174;
+	font-size: 14px;
+}
+.contact-page-bg {
+	background-image: url(/wp-content/uploads/2018/05/hero3-5afb5d68e1724.jpg);
+    background-position: center top;
+    background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+.template-card {
+	background-color: rgba(255, 255, 255, 0.9);
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    border-left: 1px solid rgb(255, 255, 255);
+    border-right: 1px solid rgb(255, 255, 255);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-top: 1px solid rgb(255, 255, 255);
+    color: rgb(111, 113, 116);
+    margin-bottom: 0px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+	text-align: center;
+	max-width: 1140px;
+	width: 100%;
+	margin: auto;
 }
 /*--------------------------------------------------------------
 ## Flip Boxes
@@ -223,19 +370,24 @@
 	text-align: center;
 	margin:auto;
 	width: 100%;
-	max-width: 300px;
+	max-width: 600px;
 	padding: 10px 20px;
+	margin-top: 20px;
 	background-color: var(--primary-color);
 }
 #action-btn .button-text{
 	display: block;
 	color: white;
 	font-weight: 900;
+	font-size: 23px;
+	font-family: var(--highlight-font-family);
 }
 #action-btn .sub-page-button-text{
 	display: block;
 	color: white;
 	font-weight: 300;
+	font-size: 20px;
+	font-family: var(--highlight-font-family);
 }
 #action-btn .button-sub-text{
 	display: block;
@@ -261,6 +413,31 @@
 }
 .footer-menu li a, .copyright-bar-wrapper small{
 	font-family: var(--global-font-family);
+}
+
+.footer-action {
+	display: block;
+	text-align: center;
+	margin: auto;
+	width: 100%;
+	max-width: 300px;
+	margin-bottom:50px;
+}
+#footer-btn {
+	font-weight: 900;
+	font-size: 17px;
+	background-color: rgb(24, 71, 161);
+    background-image: linear-gradient(0deg, transparent 10%, transparent 90%);
+    border-radius: 0px;
+    color: rgb(255, 255, 255) !important;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+	font-weight: bold;
+	padding: 15px 20px;
+}
+.footer-actions-wrapper {
+	background-color: rgb(243, 243, 243);
+    padding-bottom: 40px;
+    padding-top: 40px;
 }
 /*--------------------------------------------------------------
 ## List
@@ -297,6 +474,7 @@
 #post-369 .testimonial-title {
 	font-weight: 100;
 	color: var(--primary-color) !important;
+	font-size: 26px;
 }
 /*--------------------------------------------------------------
 ## Blog
@@ -341,6 +519,7 @@
 }
 #gform_1 .gfield_label {
 	font-family: var(--global-font-family);
+	font-size: 14px;
 }
 #gform_submit_button_1 {
 	background-color: var(--primary-color);
@@ -388,4 +567,22 @@
 }
 .form-wrapper #gform_wrapper_3 [class*="inline-form-"] .gform_body, .form-wrapper #gform_wrapper_3 [class*="inline-form-"] .gform_footer {
 	display: inline-flex;
+}
+.page-id-1500 #gform_1 .gform_title {
+    font-family: var(--highlight-font-family);
+    font-weight: 700;
+    font-style: normal;
+    color: #393b3d;
+    font-feature-settings: normal;
+    font-variant: normal;
+    text-transform: uppercase;
+	font-size: 34px!important;
+	text-align: center;
+}
+.page-id-1500 #gform_wrapper_1 {
+	background-color: rgb(227, 227, 227);
+    padding-bottom: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 30px;
 }

@@ -258,49 +258,6 @@ select {
 }
 
 /*--------------------------------------------------------------
-## Main navigation menu
---------------------------------------------------------------*/
-.main-navigation {
-	clear: both;
-	padding: 0 1em;
-	font-family: var(--menu-font);
-	font-stretch: condensed;
-	width: 100%;
-	margin: auto;
-}
-.main-navigation li {
-	position: relative;
-	width: 100%;
-    text-align: center;
-    z-index: 1;
-}
-.main-navigation .sub-menu {
-    position: absolute;
-}
-.main-navigation .sub-menu li a{
-	padding:5px;
-}
-.main-navigation a {
-	display: block;
-    width: 100%;
-    padding: 0.5em 15px 0.5em 0px;
-    text-decoration: none;
-    color: #fff;
-    font-size: var(--font-size-smaller);
-    font-weight: 700;
-    padding-right: 10px;
-}
-
-.main-navigation ul {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-}
-
-/*--------------------------------------------------------------
-## Mobile navigation
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
 # Imports
@@ -561,7 +518,6 @@ select {
 .main-navigation {
 	clear: both;
 	padding: 0 1em;
-	font-family: var(--menu-font);
 	font-stretch: condensed;
 	width: 100%;
 	margin: auto;
@@ -588,9 +544,10 @@ select {
     width: 100%;
     padding: 0.5em 15px 0.5em 0px;
     text-decoration: none;
-    color: black;
+	color: black;
+	font-family: var(--menu-font);
     font-size: var(--font-size-regular);
-    font-weight: 700;
+    font-weight: 400;
     padding-right: 10px;
 }
 
